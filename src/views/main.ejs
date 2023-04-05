@@ -12,34 +12,47 @@
         <a href="#New">New</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
-    </div>
-    <div>
+      </div>
+      <div>
         <h2>Userlist:</h2>
-
-        <table class="userTable">
+      </div>
+    <div class="table-container">
+        <table class="styled-table">
          <thead>
               <tr class="w3-light-grey">
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Points</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-                <tr>
-                  <td>Jill</td>
-                  <td>Smith</td>
-                  <td>50</td>
-                </tr>
-                <tr>
-                  <td>Eve</td>
-                  <td>Jackson</td>
-                  <td>94</td>
-                </tr>
-                <tr>
-                  <td>Adam</td>
-                  <td>Johnson</td>
-                  <td>67</td>
-                </tr>
+                <% for(let i = 0; i < dataUser.length; ++i) { %>
+                  <tr>
+                    <td>
+                      <%= dataUser[i].ID %>
+                    </td>
+                    <td>
+                      <%= dataUser[i].Name %>
+                    </td>
+                    <td>
+                      <%= dataUser[i].Age %>
+                    </td>
+                    <td>
+                      <%= dataUser[i].Email %>
+                    </td>
+                    <td>
+                      <%= dataUser[i].Address %>
+                    </td>
+                    <td>
+                      <button type="button">Detail</button>
+                      <button type="button">Edit</button>
+                      <button type="button">Delete</button>
+                    </td>
+                  </tr>
+                <% } %>
             </tbody>
          </table>
     </div>

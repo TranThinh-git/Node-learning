@@ -12,6 +12,7 @@ let getHomepage = (req, res) => {
 
 }
 
+
 module.exports = {
     getHomepage
 }
